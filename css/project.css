@@ -1,0 +1,75 @@
+.project {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.project-nav {
+    line-height: 22px;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.projectImage {
+    margin: 10px;
+    flex: 0 0 calc(50% - 20px);
+    min-width: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.videoBtn {
+    background: url(/images/yt_play_btn.png);
+    width: 28px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.modalOverlay {
+    display: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.4s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalOverlay .ratio-16-9 {
+    max-width: 80vw;
+}
+
+.modal {
+    max-width: 80vw;
+}
+
+.modal img {
+    width: 100%;
+}
+
+.ratio-16-9 {
+    width: 100vw;
+    position: relative;
+    padding-top: 56.25%
+}
+
+.ratio-16-9 > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

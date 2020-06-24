@@ -1,0 +1,38 @@
+---
+layout: default
+showNav: true
+---
+<section>
+    <h1>{{ page.title }}</h1>
+    <ul class="project-nav">
+        {% for project in page.projects %}
+            {% if project.name %}
+                <li>
+                    <a href="#{{ project.name }}">{{ project.name }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% for project in page.projects %}
+        <div class="project">
+            {% if project.name %}
+                <a name="{{ project.name }}"></a>
+                <div class="flex pad">
+                    <h3>{{ project.name }}</h3>
+                    {% if project.youtubeVideo %}
+                        <button title="View Video" class="videoBtn" data-src="{{ project.youtubeVideo }}"></button>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div class="project-images">
+                {% for image in project.images %}
+                    <img class="projectImage" src="/images/projects/{{ image }}" alt="">
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+<div class="modalOverlay">
+    <div class="modal"></div>
+</div>
+<script src="/js/projects.js"></script>

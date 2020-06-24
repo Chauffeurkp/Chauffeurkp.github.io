@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Kenneth A. Paulsen Architect{% if page.title %}{{ page.title | prepend: " | " }}{% endif %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Ken Paulsen's architecture website including some of his many professional projects." />
+		<meta name="keywords" content="Ken Paulsen, Architect, Portland, Oregon, Architecture, Plans, Drawing, Projects" />
+		<meta name="author" content="Kyle Paulsen">
+		<meta name="theme-color" content="#0295d9">
+
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/project.css">
+		<link rel="shortcut icon" href="/images/favicon.ico">
+	</head>
+	<body>
+		<header itemscope itemtype="http://schema.org/Person">
+			<a href="/" class="logo">
+				<img src="/images/spiral.png" alt="golden spiral logo">
+			</a>
+			<h1 class="name" itemprop="name"><a href="/">KENNETH A. PAULSEN, ARCHITECT</a></h1>
+			<div class="contact">
+				<h2 class="contactName">KENNETH A. PAULSEN, ARCHITECT</h2>
+				<h2 class="address" itemprop="address">5638 SW Haines St.<br/>Portland OR 97219</h2>
+				<div class="phoneEmail">
+					<h2 class="phone" itemprop="telephone"><a href="tel:503-245-6540">(503) 245-6540</a></h2>
+					<h2 class="email" itemprop="email"><a href="mailto:kparchitect@comcast.net">kparchitect@comcast.net</a></h2>
+				</div>
+			</div>
+		</header>
+		{% if layout.showNav or page.showNav %}
+			<nav>
+				<a href="/">&laquo; Home</a>
+				<a href="/churches">Church Projects</a>
+				<a href="/institutional">Institutional</a>
+				<a href="/commercial">Commercial</a>
+				<a href="/multi-family">Multi-Family</a>
+				<a href="/homes">Homes</a>
+				<a href="/additions-remodels">Additions/Remodels</a>
+			</nav>
+		{% endif %}
+		<div class="content">
+			{{ content }}
+		</div>
+	</body>
+</html>
